@@ -1,0 +1,36 @@
+.ios, .md {
+
+	page-home {
+
+		ion-slide {
+			align-items: flex-start;
+		}
+
+		ion-item {
+			margin-bottom: 5px;
+			font-size: 1.2em;
+			background-color: map-get($colors, primary);
+		}
+
+		flash-card {
+			color: #000;
+
+			img {
+				width: 70%;
+				height: auto;
+			}
+		}
+
+		.start-slide {
+			justify-content: center;
+			align-items: center;
+
+			button {
+				font-size: 1.3em;
+				font-weight: bold;
+			}
+		}
+
+	}
+
+}
