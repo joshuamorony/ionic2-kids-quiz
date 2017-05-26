@@ -18,13 +18,11 @@ export class HomePage {
 
 	constructor(public navCtrl: NavController, public dataService: Data) {
 
-		this.slideOptions = {
-			onlyExternal: true
-		};
-
 	}
 
 	ionViewDidLoad() {
+
+		this.slides.lockSwipes(true);
 
 		this.dataService.load().then((data) => {
 
@@ -43,7 +41,9 @@ export class HomePage {
 	}
 
 	nextSlide(){
+		this.slides.lockSwipes(false);
 		this.slides.slideNext();
+		this.slides.lockSwipes(true);
 	}
 
 	selectAnswer(answer, question){
