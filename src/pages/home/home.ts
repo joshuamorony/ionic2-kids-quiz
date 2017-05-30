@@ -77,9 +77,11 @@ export class HomePage {
 
 	}
 
-	restartQuiz(){
+	restartQuiz() {
 		this.score = 0;
+		this.slides.lockSwipes(false);
 		this.slides.slideTo(1, 1000);
+		this.slides.lockSwipes(true);
 	}
 
 }
